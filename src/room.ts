@@ -21,7 +21,7 @@ export default class RoomScene extends Phaser.Scene {
         }
 
         this.roomNameText = this.add
-            .text(innerWidth / 2, innerHeight / 2, `Room ID: ${room}`, {
+            .text(innerWidth / 2, innerHeight / 2, "", {
                 fontSize: "32px",
                 color: "#ffffff",
                 backgroundColor: "fff",
@@ -31,6 +31,7 @@ export default class RoomScene extends Phaser.Scene {
                 },
             })
             .setOrigin(0.5);
+        this.roomNameText.setText(`Room ID: ${room}`);
 
         this.copyButton = this.add
             .text(innerWidth / 2, innerHeight / 2 + 50, "Copy Room ID", {
