@@ -2,16 +2,16 @@ import Phaser from "phaser";
 
 export default class EndScene extends Phaser.Scene {
     private text: Phaser.GameObjects.Text | null = null;
-    private winner: boolean = false;
+    private loser: boolean = false;
 
     constructor() {
         super("EndScene");
     }
 
-    init(data: { isWinner: boolean }) {
+    init(data: { isLoser: boolean }) {
         console.log(data);
-        this.winner = data.isWinner;
-        console.log(this.winner);
+        this.loser = data.isLoser;
+        console.log(this.loser);
     }
 
     create() {
@@ -26,10 +26,10 @@ export default class EndScene extends Phaser.Scene {
                 },
             })
             .setOrigin(0.5);
-        if (this.winner) {
-            this.text.setText("You won!");
-        } else {
+        if (this.loser) {
             this.text.setText("You lost!");
+        } else {
+            this.text.setText("You won!");
         }
     }
 }
