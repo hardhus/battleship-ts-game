@@ -16,7 +16,7 @@ export default class MenuScene extends Phaser.Scene {
 
     create() {
         const createRoomButton = this.add
-            .text(innerWidth / 2, innerHeight / 2, "Create Room", {
+            .text(innerWidth / 2, innerHeight / 2, "Create || Room", {
                 fontSize: "32px",
                 color: "#000",
                 backgroundColor: "#fff",
